@@ -37,7 +37,8 @@ module TheCityAuth
     end
 
     def to_hash
-      puts signature_base
+      # Uncomment the below if you want to what is being signed.
+      # puts signature_base 
       {
         'X-City-Sig'        => signature,
         'X-City-User-Token' => user_token,
