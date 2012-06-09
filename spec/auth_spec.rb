@@ -31,7 +31,6 @@ describe TheCityAuth::Header do
     auth = $auth.merge(:timestamp => '1339141434')
     header = TheCityAuth::Header.new(:get, "https://api.onthecity.org/users", {:page => 1}, auth)
     header.signature.should ==(signature_for(auth, :get, '/users', [['page', '1']]))
-    puts header.signature
   end
 
 end
