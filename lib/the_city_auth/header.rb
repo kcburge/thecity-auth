@@ -66,6 +66,7 @@ module TheCityAuth
     end
 
     def normalized_params
+      ########### todo........not sorting!
       result = signature_params.map {|k,v| "#{k}=#{self.class.encode(v)}" }.join('&')
       if result.length > 0
         result = '?' + result
